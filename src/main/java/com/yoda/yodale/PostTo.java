@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 
 @ComponentScan
-public class InstaPost {
+public class PostTo {
     String pathToFile;
     CharSequence pathfile = pathToFile;
 
@@ -24,9 +24,9 @@ public class InstaPost {
 
     String actualTitle = "";
 
-    public void prepareForPost(InstaPost st){
+    public void prepareForPost(PostTo st){
 
-        WebDriver chrdriver = Driver.getDriver();
+        WebDriver chrdriver = Config.getDriver();
         sleep();sleep();sleep();sleep();
         sleep();sleep();sleep();sleep();
 
@@ -35,7 +35,7 @@ public class InstaPost {
 
 
         //loginInsta(chrdriver);
-        postInsta(chrdriver, st);
+        postPic(chrdriver, st);
 
         sleep();sleep();sleep();sleep();
         //close Fire fox
@@ -45,7 +45,7 @@ public class InstaPost {
 
 
 
-    public static void postInsta(WebDriver driver, InstaPost st){
+    public static void postPic(WebDriver driver, PostTo st){
         // ********** postavi developer tools i refreshaj
 
 

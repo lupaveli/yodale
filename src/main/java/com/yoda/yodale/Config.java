@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Driver {
+public class Config {
 
 
 

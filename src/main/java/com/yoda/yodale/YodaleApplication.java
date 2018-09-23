@@ -12,13 +12,13 @@ public class YodaleApplication {
 
 
 
-		InstaPost instaPost = new InstaPost();
+		PostTo postTo = new PostTo();
 		System.out.println("Program Arguments:");
 		for (String arg : args) {
-			instaPost.setPathToFile(arg);
+			postTo.setPathToFile(arg);
 			System.out.println("\t" + arg);
 		}
-		instaPost.prepareForPost(instaPost);
+		postTo.prepareForPost(postTo);
 
 
 	}
