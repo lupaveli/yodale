@@ -30,12 +30,12 @@ public class NewTab {
 
     *//**
      * Opens a new tab for the given URL
-     * @param url The URL to
+     * @param picUrl The URL to
      * @throws JavaScriptException If unable to open tab
      *//*
-    public void openTab(String url) {
+    public void openTab(String picUrl) {
         String script = "var d=document,a=d.createElement('a');a.target='_blank';a.href='%s';a.innerHTML='.';d.body.appendChild(a);return a";
-        Object element = trigger(String.format(script, url));
+        Object element = trigger(String.format(script, picUrl));
         if (element instanceof WebElement) {
             WebElement anchor = (WebElement) element; anchor.click();
             trigger("var a=arguments[0];a.parentNode.removeChild(a);", anchor);
