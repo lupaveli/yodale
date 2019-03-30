@@ -28,20 +28,21 @@ public class Config {
     @Value("currentDir")
     private static String currentDir;
 
+    //promjena u chromium !!!!!!
     public static WebDriver getDriver() {
         pathToChromeData = "user-data-dir=" + pathToChromeData;
         System.out.println("pathToChromeData: "  + pathToChromeData);
 
         ChromeOptions options = new ChromeOptions();
-        //options.setBinary("/usr/bin/chromium-browser");
+        options.setBinary("/usr/bin/chromium-browser");
         options.addArguments(pathToChromeData); //#Path to your chrome profile
         //options.setBinary(pathToChromeDriver);
         Map<String, String> mobileEmulation = new HashMap<>();
 
         mobileEmulation.put("deviceName", "Galaxy S5");
         options.setExperimentalOption("mobileEmulation", mobileEmulation);
-        //options.addArguments("--headless");
-        //options.addArguments("--disable-gpu");
+/*        options.addArguments("--headless");
+        options.addArguments("--disable-gpu");*/
         //options.addArguments("--no-sandbox");
         //options.addArguments("--disable-dev-shm-usage");
         //options.setBinary("/usr/bin/google-chrome");
