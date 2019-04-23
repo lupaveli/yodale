@@ -9,7 +9,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class YodaleApplication {
-
+	//sikulix instalacija se nalazi u root folderu
 
 	public static void main(String[] args) {
 		SpringApplication.run(YodaleApplication.class, args);
